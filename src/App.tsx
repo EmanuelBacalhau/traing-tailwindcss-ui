@@ -1,6 +1,7 @@
 import { Header } from "./components/Header"
 import { Container } from "./components/Container"
 import { SideBar } from "./components/Sidebar"
+import { BottomBar } from "./components/BottomBar"
 
 function App() {
 
@@ -15,7 +16,10 @@ function App() {
           "
         >
           <SideBar />
-          <h1>To aqui</h1>
+          <div className="h-full">
+            <h1>To aqui</h1>
+          </div>
+          <BottomBar />
         </div>
       </Container>
     </>

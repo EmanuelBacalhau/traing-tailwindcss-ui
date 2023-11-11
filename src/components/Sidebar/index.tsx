@@ -2,7 +2,7 @@ import { Button } from "./Button"
 import { WriteButton } from "./WriteButton"
 import { FiAlertOctagon, FiArchive, FiEdit3, FiFileText, FiInbox, FiSend, FiTrash } from 'react-icons/fi'
 
-const inLineIcons = "inline mr-2 mb-1"
+const inLineIcon = "inline mr-2 mb-1"
 
 export function SideBar() {
   return (
@@ -15,37 +15,37 @@ export function SideBar() {
         "
       >
       <WriteButton>
-        <FiEdit3 className={inLineIcons} />
+        <FiEdit3 className={inLineIcon} />
         Escrever
       </WriteButton>
       
       <Button active>
-        <FiInbox className={inLineIcons} />
+        <FiInbox className={inLineIcon} />
         Caixa de entrada
       </Button>
       
       <Button>
-        <FiSend className={inLineIcons} />
+        <FiSend className={inLineIcon} />
         Enviados
       </Button>
       
       <Button>
-        <FiFileText className={inLineIcons} />
+        <FiFileText className={inLineIcon} />
         Rascunhos
       </Button>
       
       <Button>
-        <FiArchive className={inLineIcons} />
+        <FiArchive className={inLineIcon} />
         Arquivados
       </Button>
       
       <Button>
-        <FiAlertOctagon className={inLineIcons} />
+        <FiAlertOctagon className={inLineIcon} />
         Spam
       </Button>
       
       <Button>
-        <FiTrash className={inLineIcons} />
+        <FiTrash className={inLineIcon} />
         Lixeira
       </Button>
     </aside>
