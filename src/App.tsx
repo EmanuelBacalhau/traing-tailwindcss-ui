@@ -1,29 +1,23 @@
-import { useState } from "react"
 import { Header } from "./components/Header"
+import { Container } from "./components/Container"
+import { SideBar } from "./components/Sidebar"
 
 function App() {
-  const [count, setCount] = useState<number>(0)
 
   return (
     <>
       <Header />
-      <div className="
-        h-screen 
-        flex items-center justify-center 
-        text-zinc-950 
-        dark:bg-zinc-800 dark:text-zinc-50">
-        <button 
-          onClick={() => setCount(value => value++)} 
+      <Container>
+        <div 
           className="
-            p-4 rounded-md 
-            text-black-200 
-            border border-transparent hover:border-cyan-500 
-            transition-colors
+            flex flex-col md:flex-row
+            gap-2 md:gap-4 h-full relative
           "
         >
-          Count {count}
-        </button>
-      </div>
+          <SideBar />
+          <h1>To aqui</h1>
+        </div>
+      </Container>
     </>
   )
 }
