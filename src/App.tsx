@@ -1,10 +1,12 @@
 import { useState } from "react"
+import { Header } from "./components/Header"
 
 function App() {
   const [count, setCount] = useState<number>(0)
 
   return (
     <>
+      <Header />
       <div className="
         h-screen 
         flex items-center justify-center 
