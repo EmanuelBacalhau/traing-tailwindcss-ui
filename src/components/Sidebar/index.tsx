@@ -2,7 +2,7 @@ import { Button } from "./Button"
 import { WriteButton } from "./WriteButton"
 import { FiAlertOctagon, FiArchive, FiEdit3, FiFileText, FiInbox, FiSend, FiTrash } from 'react-icons/fi'
 
-const inLineIcon = "inline mr-2 mb-1"
+const inLineIcon = "inline mr-1 mb-1"
 
 export function SideBar() {
   return (
@@ -12,7 +12,7 @@ export function SideBar() {
         lg:flex flex-col items-start 
         gap-2 grow-0 
         basis-48 shrink
-        "
+      "
       >
       <WriteButton>
         <FiEdit3 className={inLineIcon} />

@@ -1,9 +1,21 @@
+import { useState } from "react"
+
 import { Header } from "./components/Header"
-import { Container } from "./components/Container"
 import { SideBar } from "./components/Sidebar"
+import { Container } from "./components/Container"
 import { BottomBar } from "./components/BottomBar"
+import { EmailList } from "./components/EmailList"
+
+export type Email = {
+  id: number
+  from: string
+  subject: string
+  body: string
+  createdAt: string
+}
 
 function App() {
+  const [openEmail, setOpenEmail] = useState<Email>({} as Email)
 
   return (
     <>
@@ -16,9 +28,13 @@ function App() {
           "
         >
           <SideBar />
-          <div className="h-full">
-            <h1>To aqui</h1>
-          </div>
+
+          <EmailList setOpenEmail={setOpenEmail} />
+
+          {
+            JSON.stringify(openEmail)
+          }
+
           <BottomBar />
         </div>
       </Container>
