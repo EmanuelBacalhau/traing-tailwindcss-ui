@@ -5,6 +5,7 @@ import { SideBar } from "./components/Sidebar"
 import { Container } from "./components/Container"
 import { BottomBar } from "./components/BottomBar"
 import { EmailList } from "./components/EmailList"
+import { EmailContent } from "./components/EmailContent"
 
 export type Email = {
   id: number
@@ -32,8 +33,10 @@ function App() {
           <EmailList setOpenEmail={setOpenEmail} />
 
           {
-            JSON.stringify(openEmail)
+            openEmail.id && 
+            <EmailContent email={openEmail} setOpenEmail={setOpenEmail} />
           }
+
 
           <BottomBar />
         </div>
